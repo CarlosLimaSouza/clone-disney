@@ -1,0 +1,92 @@
+@import "./color";
+@import "./mixins";
+
+@font-face {
+  font-family: "avenir-roman";
+  src: url(/fonts/avenir-roman.ttf);
+}
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: avenir-roman;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+body {
+  background: $fundo url(/imagens/disneyplus.jpg) no-repeat right;
+  background-size: cover;
+  color: $branco;
+}
+
+header {
+  display: flex;
+  justify-content: end;
+  position: relative;
+  a {
+    position: absolute;
+    padding: 8px 10px;
+    margin: 15px 30px;
+    font-size: 1rem;
+    text-decoration: none;
+    border: solid 1px $prata;
+    border-radius: 4px;
+    color: $branco;
+    background-color: $preto;
+    transition: ease 0.4s;
+  }
+  a:hover {
+    background-color: $branco;
+    color: $preto;
+  }
+}
+
+.topo {
+  width: 100%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  position: relative;
+  top: 190px;
+  left: 60px;
+
+  .anuncio {
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    img {
+      display: block;
+      width: 300px;
+    }
+    h1 {
+      margin-bottom: 20px;
+      font-size: 1.6rem;
+    }
+    a {
+      margin-top: 30px;
+      display: inline-flex;
+      text-decoration: none;
+      width: 100%;
+
+      span {
+        background-color: $lilas;
+        width: 100%;
+        font-size: 1.3rem;
+        color: $branco;
+        text-align: center;
+        border-radius: 3px;
+        padding: 15px 0px;
+      }
+    }
+    span:hover {
+      background-color: $lilas-vibrante;
+    }
+  }
+}

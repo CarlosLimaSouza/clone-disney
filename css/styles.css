@@ -1,0 +1,90 @@
+@font-face {
+  font-family: "avenir-roman";
+  src: url(/fonts/avenir-roman.ttf);
+}
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: avenir-roman;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+body {
+  background: #040814 url(/imagens/disneyplus.jpg) no-repeat right;
+  background-size: cover;
+  color: #f9f9f9;
+}
+
+header {
+  display: flex;
+  justify-content: end;
+  position: relative;
+}
+header a {
+  position: absolute;
+  padding: 8px 10px;
+  margin: 15px 30px;
+  font-size: 1rem;
+  text-decoration: none;
+  border: solid 1px silver;
+  border-radius: 4px;
+  color: #f9f9f9;
+  background-color: rgba(0, 0, 0, 0.8);
+  transition: ease 0.4s;
+}
+header a:hover {
+  background-color: #f9f9f9;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.topo {
+  width: 100%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  position: relative;
+  top: 190px;
+  left: 60px;
+}
+.topo .anuncio {
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+}
+.topo .anuncio img {
+  display: block;
+  width: 300px;
+}
+.topo .anuncio h1 {
+  margin-bottom: 20px;
+  font-size: 1.6rem;
+}
+.topo .anuncio a {
+  margin-top: 30px;
+  display: inline-flex;
+  text-decoration: none;
+  width: 100%;
+}
+.topo .anuncio a span {
+  background-color: #6421ff;
+  width: 100%;
+  font-size: 1.3rem;
+  color: #f9f9f9;
+  text-align: center;
+  border-radius: 3px;
+  padding: 15px 0px;
+}
+.topo .anuncio span:hover {
+  background-color: #8921ff;
+}
+
+/*# sourceMappingURL=styles.css.map */
