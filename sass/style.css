@@ -21,14 +21,33 @@ body {
   background-size: cover;
   color: #f9f9f9;
 }
+@media (max-width: 1025px) {
+  body {
+    background: #040814 url(/imagens/background_mobile.jpg) no-repeat top;
+    background-size: cover;
+  }
+}
+body .main-content {
+  display: flex;
+  flex-direction: column;
+}
+@media (max-width: 1025px) {
+  body .main-content {
+    align-items: center;
+  }
+}
+
+header {
+  width: 100%;
+}
 
 header nav {
   display: flex;
   justify-content: end;
-  position: relative;
+  width: 100%;
+  position: fixed;
 }
 header nav a {
-  position: absolute;
   padding: 10px 15px;
   margin: 15px 30px;
   font-size: 1.1rem;
@@ -45,13 +64,16 @@ header nav a:hover {
 }
 
 .topo {
-  display: inline-flex;
+  display: flex;
+  flex-direction: column;
   justify-content: start;
-  align-items: center;
-  position: relative;
-  overflow: hidden;
-  top: 295px;
-  left: 120px;
+  margin: 23vh 0 0 3vw;
+}
+@media (max-width: 1025px) {
+  .topo {
+    margin: 0;
+    padding-top: 53vw;
+  }
 }
 .topo .anuncio {
   width: 600px;
@@ -60,35 +82,44 @@ header nav a:hover {
   justify-content: start;
   align-items: center;
 }
-.topo .anuncio img {
+.topo img {
   display: block;
   width: 310px;
 }
-.topo .anuncio h1 {
+.topo h1 {
   margin-bottom: 20px;
   font-size: 1.65rem;
   letter-spacing: 1;
+  color: #f9f9f9;
+  text-align: center;
 }
-.topo .anuncio a {
+.topo a {
   display: inline-flex;
   text-decoration: none;
-  width: 100%;
+  width: 90%;
   display: flex;
   align-items: center;
   margin-top: 40px;
 }
-.topo .anuncio a span {
+.topo a span {
   background-color: #6421ff;
   width: 100%;
   font-size: 1.25rem;
-  color: #f9f9f9;
   text-align: center;
   border-radius: 3px;
   padding: 18px;
+  color: #f9f9f9;
   transition: ease 0.2s;
 }
-.topo .anuncio span:hover {
+.topo span:hover {
   background-color: #8921ff;
 }
 
-/*# sourceMappingURL=styles.css.map */
+button {
+  margin: 90px 50px;
+  height: 38px;
+  width: 38px;
+  color: silver;
+  background-color: transparent;
+  border: transparent;
+}/*# sourceMappingURL=style.css.map */
