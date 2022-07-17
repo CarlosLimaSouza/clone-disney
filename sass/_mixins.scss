@@ -1,0 +1,60 @@
+// MEDIA QUERIES
+$small: 768px;
+$medium: 1025px;
+
+@mixin medio {
+  @media (max-width: $medium) {
+    @content;
+  }
+}
+
+@mixin pequeno {
+  @media (max-width: $small) {
+    @content;
+  }
+}
+
+// RESET
+@mixin reset {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+// HOVERS
+
+@mixin transitionHover {
+  transition: ease 0.2s;
+}
+
+@mixin lislasHover {
+  background-color: $lilas-vibrante;
+}
+// FONTES
+
+@mixin fontePadrao {
+  margin-bottom: 20px;
+  font-size: 1.65rem;
+  letter-spacing: 1;
+  color: $branco;
+  text-align: center;
+}
+
+@mixin fonteGrande {
+  margin-bottom: 30px;
+  font-size: 1.85rem;
+  letter-spacing: 1.1;
+  text-align: center;
+}
+
+@mixin fontePequena {
+  margin-bottom: 10px;
+  font-size: 1rem;
+  letter-spacing: 1;
+  color: $prata;
+  text-align: center;
+}
+
+// ANIMAÇÃO
+@mixin slide {
+}
