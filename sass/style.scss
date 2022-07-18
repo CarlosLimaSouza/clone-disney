@@ -109,7 +109,7 @@ header nav {
   }
 }
 
-button {
+.hint {
   margin: 90px 50px;
   height: 38px;
   width: 38px;
@@ -117,5 +117,34 @@ button {
   background-color: transparent;
   border: transparent;
   @include medio {
+  }
+}
+
+.plans {
+  background-color: red;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  ul {
+    width: 100%;
+    background-color: yellow;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    li {
+      img {
+        width: 100%;
+      }
+   }
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      max-width: 380px;
+      background-color: blue;
+    }
   }
 }

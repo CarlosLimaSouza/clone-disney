@@ -115,11 +115,45 @@ header nav a:hover {
   background-color: #8921ff;
 }
 
-button {
+.hint {
   margin: 90px 50px;
   height: 38px;
   width: 38px;
   color: silver;
   background-color: transparent;
   border: transparent;
+}
+.plans {
+  background-color: red;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.plans ul {
+  width: 100%;
+  background-color: yellow;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.plans ul li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 380px;
+  background-color: blue;
+}
+.plans ul li img {
+  width: 100%;
+}
+.plans ul li h1 {
+  margin-bottom: 20px;
+  font-size: 1.65rem;
+  letter-spacing: 1;
+  color: #f9f9f9;
+  text-align: center;
+  background-color: green;
 }/*# sourceMappingURL=style.css.map */
