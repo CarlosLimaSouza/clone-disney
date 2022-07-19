@@ -46,6 +46,7 @@ header nav {
   justify-content: end;
   width: 100%;
   position: fixed;
+  z-index: 3;
 }
 header nav a {
   padding: 10px 15px;
@@ -67,7 +68,7 @@ header nav a:hover {
   display: flex;
   flex-direction: column;
   justify-content: start;
-  margin: 23vh 0 0 3vw;
+  margin: 18rem 0px 12rem 8rem;
 }
 @media (max-width: 1025px) {
   .topo {
@@ -93,6 +94,11 @@ header nav a:hover {
   color: #f9f9f9;
   text-align: center;
 }
+@media (max-width: 1025px) {
+  .topo h1 {
+    font-size: 1.4rem;
+  }
+}
 .topo a {
   display: inline-flex;
   text-decoration: none;
@@ -116,7 +122,7 @@ header nav a:hover {
 }
 
 .hint {
-  margin: 90px 50px;
+  margin: 5rem 6rem;
   height: 38px;
   width: 38px;
   color: silver;
@@ -128,31 +134,35 @@ header nav a:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 4rem;
 }
 .plans h1 {
   margin-bottom: 30px;
   font-size: 1.85rem;
   letter-spacing: 1.1;
   text-align: center;
+  font-size: 2.5rem;
 }
 .plans ul {
   width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  background-color: red;
+  align-items: flex-start;
 }
 .plans ul li {
-  padding: 0px 30px;
-  background-color: blue;
+  padding: 40px 20px;
   max-width: 380px;
+  line-height: 1.5;
   display: flex;
+  justify-content: start;
   flex-direction: column;
   align-items: center;
   text-align: center;
 }
 .plans ul li img {
-  width: 100%;
+  width: auto;
+  height: 80px;
 }
 .plans ul li h2 {
   margin-bottom: 20px;
@@ -160,23 +170,154 @@ header nav a:hover {
   letter-spacing: 1;
   color: #f9f9f9;
   text-align: center;
+  margin: 30px 0px 0px 0px;
 }
 .plans ul li p {
-  font-size: 22px;
+  width: 90%;
+  height: 100px;
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+  letter-spacing: 1;
+  color: silver;
+  text-align: center;
+  font-size: 1.1rem;
+  letter-spacing: 0.7;
 }
 .plans ul li a {
   display: inline-flex;
   text-decoration: none;
   width: 90%;
-  margin-top: 40px;
+  margin-top: 20px;
 }
-.plans ul li a span {
+.plans ul li span {
   background-color: #6421ff;
   width: 100%;
-  font-size: 1.25rem;
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+  letter-spacing: 1;
+  color: silver;
   text-align: center;
+  text-align: center;
+  font-weight: 500;
   border-radius: 3px;
   padding: 18px;
   color: #f9f9f9;
+  text-transform: uppercase;
   transition: ease 0.2s;
+}
+.plans ul li span:hover {
+  background-color: #8921ff;
+}
+.plans ul #popular {
+  background: url(/imagens/popular.png) top no-repeat;
+  background-size: contain;
+}
+.plans #note {
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+  letter-spacing: 1;
+  color: silver;
+  text-align: center;
+  font-size: 0.7rem;
+  letter-spacing: 0.6;
+  font-weight: 600;
+}
+
+.yourway {
+  width: 100%;
+  padding: 6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.yourway img {
+  width: 50%;
+}
+.yourway .yourWay__text {
+  padding: 3rem;
+  width: 50%;
+}
+.yourway .yourWay__text h2 {
+  margin-bottom: 30px;
+  font-size: 1.85rem;
+  letter-spacing: 1.1;
+  text-align: center;
+  font-size: 2.5rem;
+  text-align: start;
+}
+.yourway .yourWay__text p {
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+  letter-spacing: 1;
+  color: silver;
+  text-align: center;
+  font-size: 1.1rem;
+  text-align: start;
+  line-height: 1.6;
+  letter-spacing: 1.2;
+}
+
+.originals {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px 5vw;
+}
+.originals h2 {
+  margin-bottom: 30px;
+  font-size: 1.85rem;
+  letter-spacing: 1.1;
+  text-align: center;
+  font-size: 2.3rem;
+}
+.originals p {
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+  letter-spacing: 1;
+  color: silver;
+  text-align: center;
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+.originals ul {
+  width: 100%;
+  display: grid;
+  list-style: none;
+  gap: 1.5rem;
+  grid-template-columns: auto auto auto;
+}
+.originals ul li img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+.download {
+  padding: 5vw;
+  position: relative;
+}
+.download img {
+  width: 100%;
+}
+.download div {
+  width: 40%;
+  max-width: calc(50% - 5vw);
+  position: absolute;
+  left: 52%;
+  top: 40%;
+}
+.download div h2 {
+  margin-bottom: 30px;
+  font-size: 1.85rem;
+  letter-spacing: 1.1;
+  text-align: center;
+  text-align: start;
+}
+.download div p {
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+  letter-spacing: 1;
+  color: silver;
+  text-align: center;
+  text-align: start;
 }/*# sourceMappingURL=style.css.map */

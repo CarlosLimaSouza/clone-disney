@@ -43,6 +43,7 @@ header nav {
   justify-content: end;
   width: 100%;
   position: fixed;
+  z-index: 3;
   a {
     padding: 10px 15px;
     margin: 15px 30px;
@@ -64,7 +65,7 @@ header nav {
   display: flex;
   flex-direction: column;
   justify-content: start;
-  margin: 23vh 0 0 3vw;
+  margin: 18rem 0px 12rem 8rem;
   @include medio {
     margin: 0;
     padding-top: 53vw;
@@ -84,6 +85,9 @@ header nav {
   }
   h1 {
     @include fontePadrao;
+    @include medio {
+      font-size: 1.4rem;
+    }
   }
   a {
     display: inline-flex;
@@ -110,7 +114,7 @@ header nav {
 }
 
 .hint {
-  margin: 90px 50px;
+  margin: 5rem 6rem;
   height: 38px;
   width: 38px;
   color: $prata;
@@ -124,49 +128,155 @@ header nav {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 4rem;
   h1 {
     @include fonteGrande;
+
+    font-size: 2.5rem;
   }
   ul {
     width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    background-color: red;
+    align-items: flex-start;
 
     li {
-      padding: 0px 30px;
-      background-color: blue;
+      padding: 40px 20px;
       max-width: 380px;
+      line-height: 1.5;
       display: flex;
+      justify-content: start;
       flex-direction: column;
       align-items: center;
       text-align: center;
       img {
-        width: 100%;
+        width: auto;
+        height: 80px;
       }
       h2 {
         @include fontePadrao;
+        margin: 30px 0px 0px 0px;
       }
       p {
-        font-size: 22px;
+        width: 90%;
+        height: 100px;
+        @include fontePequena;
+        font-size: 1.1rem;
+        letter-spacing: 0.7;
       }
       a {
         display: inline-flex;
         text-decoration: none;
         width: 90%;
-        margin-top: 40px;
-        span {
-          background-color: $lilas;
-          width: 100%;
-          font-size: 1.25rem;
-          text-align: center;
-          border-radius: 3px;
-          padding: 18px;
-          color: $branco;
-          @include transitionHover;
-        }
+        margin-top: 20px;
       }
+
+      span {
+        background-color: $lilas;
+        width: 100%;
+        @include fontePequena;
+        text-align: center;
+        font-weight: 500;
+        border-radius: 3px;
+        padding: 18px;
+        color: $branco;
+        text-transform: uppercase;
+        @include transitionHover;
+      }
+      span:hover {
+        @include lislasHover;
+      }
+    }
+    #popular {
+      background: url(/imagens/popular.png) top no-repeat;
+      background-size: contain;
+    }
+  }
+  #note {
+    @include fontePequena;
+    font-size: 0.7rem;
+    letter-spacing: 0.6;
+    font-weight: 600;
+  }
+}
+
+.yourway {
+  width: 100%;
+  padding: 6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    width: 50%;
+  }
+  .yourWay__text {
+    padding: 3rem;
+    width: 50%;
+    h2 {
+      @include fonteGrande;
+      font-size: 2.5rem;
+      text-align: start;
+    }
+    p {
+      @include fontePequena;
+      font-size: 1.1rem;
+      text-align: start;
+      line-height: 1.6;
+      letter-spacing: 1.2;
+    }
+  }
+}
+
+.originals {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px 5vw;
+  h2 {
+    @include fonteGrande;
+    font-size: 2.3rem;
+  }
+  p {
+    @include fontePequena;
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+  ul {
+    width: 100%;
+    display: grid;
+    list-style: none;
+    gap: 1.5rem;
+    grid-template-columns: auto auto auto;
+    li {
+      img {
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+      }
+    }
+  }
+}
+.download {
+  padding: 5vw;
+  position: relative;
+  img {
+    width: 100%;
+  }
+  div {
+    width: 40%;
+    max-width: calc(50% - 5vw);
+    position: absolute;
+    left: 52%;
+    top: 40%;
+    h2 {
+      @include fonteGrande;
+      text-align: start;
+    }
+    p {
+      @include fontePequena;
+      text-align: start;
     }
   }
 }
