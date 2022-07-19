@@ -280,3 +280,89 @@ header nav {
     }
   }
 }
+.devices {
+  padding: 5vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  h2 {
+    @include fonteGrande;
+    font-size: 2.3rem;
+  }
+  ul {
+    display: flex;
+    width: 100%;
+    li {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      list-style: none;
+      img {
+        width: 100%;
+      }
+      h3 {
+        @include fontePadrao;
+      }
+      p {
+        @include fontePequena;
+        font-size: 1.3rem;
+      }
+    }
+  }
+}
+.faq {
+  padding: 5vw;
+  h2 {
+    @include fonteGrande;
+    font-size: 2.3rem;
+  }
+  .container__open {
+    background-color: green;
+    padding: 1vw;
+
+    .container__open--btn {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      background-color: transparent;
+      border: transparent;
+      @include fontePadrao;
+    }
+  }
+
+  .container__open--child {
+    background-color: red;
+    @include fontePequena;
+    font-size: 1.2rem;
+    text-align: start;
+    line-height: 2;
+  }
+}
+.info {
+  padding: 5vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  img {
+    width: 100px;
+  }
+  div {
+    padding: 0px 15vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    a {
+      margin: 0.5rem 1rem;
+      text-decoration: none;
+      @include fontePequena;
+      font-size: 0.9rem;
+    }
+  }
+  p {
+    padding-top: 2rem;
+    text-align: center;
+    font-size: 0.7rem;
+  }
+}
