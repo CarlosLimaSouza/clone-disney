@@ -1,5 +1,5 @@
 // MEDIA QUERIES
-$small: 900px;
+$small: 830px;
 $medium: 1025px;
 
 @mixin medio {
@@ -56,5 +56,17 @@ $medium: 1025px;
 }
 
 // ANIMAÇÃO
-@mixin slide {
+@mixin animation {
+  @keyframes btn_bounce {
+    0% {
+      transform: translateY(8px);
+    }
+    50% {
+      transform: translateY(-8px);
+    }
+    100% {
+      transform: translateY(8px);
+    }
+  }
+  animation: btn_bounce 0.9s ease-in-out infinite;
 }

@@ -24,7 +24,7 @@
           <a href="#"><span>ESCOLHA SEU PLANO</span></a>
         </div>
       </section>
-      <button class="hint">
+      <button onclick="plans()" class="hint">
         <div class="seta">
           <i class="fa-solid fa-chevron-down fa-2xl"></i>
         </div>
@@ -103,7 +103,12 @@
         </ul>
       </section>
       <section class="download">
-        <img src="/imagens/rei_leao.png" alt="Rei leão" />
+        <img class="default_img" src="/imagens/rei_leao.png" alt="Rei leão" />
+        <img
+          class="small_img"
+          src="/imagens/rei_leao_small.png"
+          alt="rei leão"
+        />
         <div>
           <h2>Baixe filmes e séries</h2>
           <p>
@@ -162,7 +167,7 @@
       <section class="faq">
         <h2>Perguntas Frequentes</h2>
         <div class="container__open">
-          <button class="container__open--btn">
+          <button onclick="toggleBtn()" class="container__open--btn">
             O que está incluído no Disney+?
           </button>
           <div class="container__open--child">
@@ -188,6 +193,8 @@
             </p>
           </div>
         </div>
+        
+        </div>
       </section>
     </main>
     <footer class="info">
@@ -211,5 +218,6 @@
         CNPJ/M 73.042.962/0004-20
       </p>
     </footer>
+    <script src="/js/script.js"></script>
   </body>
 </html>

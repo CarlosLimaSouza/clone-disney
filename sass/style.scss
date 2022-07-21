@@ -26,6 +26,9 @@ body {
     background: $fundo url(/imagens/background_mobile.jpg) no-repeat top;
     background-size: cover;
   }
+  @include pequeno {
+    background-size: 100%;
+  }
   .main-content {
     display: flex;
     flex-direction: column;
@@ -70,6 +73,9 @@ header nav {
     margin: 0;
     padding-top: 53vw;
   }
+  @include pequeno {
+    padding-top: 70vw;
+  }
 
   .anuncio {
     width: 600px;
@@ -77,6 +83,9 @@ header nav {
     flex-direction: column;
     justify-content: start;
     align-items: center;
+    @include pequeno {
+      width: 250px;
+    }
   }
 
   img {
@@ -105,6 +114,9 @@ header nav {
       border-radius: 3px;
       padding: 18px;
       color: $branco;
+      @include pequeno {
+        font-size: 1rem;
+      }
       @include transitionHover;
     }
   }
@@ -114,12 +126,17 @@ header nav {
 }
 
 .hint {
+  display: flex;
+  justify-content: center;
   margin: 5rem 6rem;
+  padding: 30px;
   height: 38px;
   width: 38px;
   color: $prata;
   background-color: transparent;
   border: transparent;
+  cursor: pointer;
+  @include animation;
   @include medio {
   }
 }
@@ -140,65 +157,70 @@ header nav {
     flex-direction: row;
     justify-content: space-evenly;
     align-items: flex-start;
+    @include medio {
+      display: grid;
+      grid-template-columns: auto;
+    }
+  }
 
-    li {
-      padding: 40px 20px;
-      max-width: 380px;
-      line-height: 1.5;
-      display: flex;
-      justify-content: start;
-      flex-direction: column;
-      align-items: center;
+  li {
+    padding: 40px 20px;
+    max-width: 380px;
+    line-height: 1.5;
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    img {
+      width: auto;
+      height: 80px;
+    }
+    h2 {
+      @include fontePadrao;
+      margin: 30px 0px 0px 0px;
+    }
+    p {
+      width: 90%;
+      height: 100px;
+      @include fontePequena;
+      font-size: 1.1rem;
+      letter-spacing: 0.7;
+    }
+    a {
+      display: inline-flex;
+      text-decoration: none;
+      width: 90%;
+      margin-top: 20px;
+    }
+
+    span {
+      background-color: $lilas;
+      width: 100%;
+      @include fontePequena;
       text-align: center;
-      img {
-        width: auto;
-        height: 80px;
-      }
-      h2 {
-        @include fontePadrao;
-        margin: 30px 0px 0px 0px;
-      }
-      p {
-        width: 90%;
-        height: 100px;
-        @include fontePequena;
-        font-size: 1.1rem;
-        letter-spacing: 0.7;
-      }
-      a {
-        display: inline-flex;
-        text-decoration: none;
-        width: 90%;
-        margin-top: 20px;
-      }
-
-      span {
-        background-color: $lilas;
-        width: 100%;
-        @include fontePequena;
-        text-align: center;
-        font-weight: 500;
-        border-radius: 3px;
-        padding: 18px;
-        color: $branco;
-        text-transform: uppercase;
-        @include transitionHover;
-      }
-      span:hover {
-        @include lislasHover;
-      }
+      font-weight: 500;
+      border-radius: 3px;
+      padding: 18px;
+      color: $branco;
+      text-transform: uppercase;
+      @include transitionHover;
     }
-    #popular {
-      background: url(/imagens/popular.png) top no-repeat;
-      background-size: contain;
+    span:hover {
+      @include lislasHover;
     }
   }
-  #note {
-    @include fontePequena;
-    font-size: 0.7rem;
-    letter-spacing: 0.6;
-    font-weight: 600;
+  #popular {
+    background: url(/imagens/popular.png) top no-repeat;
+    background-size: contain;
   }
+}
+#note {
+  @include fontePequena;
+  font-size: 0.7rem;
+  letter-spacing: 0.6;
+  font-weight: 600;
 }
 
 .yourway {
@@ -207,17 +229,30 @@ header nav {
   display: flex;
   justify-content: center;
   align-items: center;
-
+  flex-wrap: wrap;
+  @include medio {
+    padding: 6rem 2rem;
+  }
   img {
     width: 50%;
+    @include medio {
+      min-width: 90%;
+    }
   }
   .yourWay__text {
     padding: 3rem;
     width: 50%;
+    @include medio {
+      min-width: 90%;
+      padding: 3rem 0px;
+    }
     h2 {
       @include fonteGrande;
       font-size: 2.5rem;
       text-align: start;
+      @include medio {
+        text-align: center;
+      }
     }
     p {
       @include fontePequena;
@@ -225,6 +260,9 @@ header nav {
       text-align: start;
       line-height: 1.6;
       letter-spacing: 1.2;
+      @include medio {
+        text-align: center;
+      }
     }
   }
 }
@@ -234,6 +272,7 @@ header nav {
   flex-direction: column;
   align-items: center;
   padding: 0px 5vw;
+
   h2 {
     @include fonteGrande;
     font-size: 2.3rem;
@@ -245,11 +284,17 @@ header nav {
   }
   ul {
     width: 100%;
-    display: grid;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     list-style: none;
     gap: 1.5rem;
-    grid-template-columns: auto auto auto;
+
     li {
+      max-width: 30%;
+      @include medio {
+        max-width: 45%;
+      }
       img {
         width: 100%;
         height: 100%;
@@ -261,22 +306,45 @@ header nav {
 .download {
   padding: 5vw;
   position: relative;
-  img {
+
+  .default_img {
     width: 100%;
+    @include pequeno {
+      display: none;
+    }
   }
+  .small_img {
+    display: none;
+    width: 100%;
+    @include pequeno {
+      display: block;
+      margin-bottom: 2rem;
+    }
+  }
+
   div {
     width: 40%;
     max-width: calc(50% - 5vw);
     position: absolute;
     left: 52%;
     top: 40%;
+    @include pequeno {
+      position: static;
+      display: inline;
+    }
     h2 {
       @include fonteGrande;
       text-align: start;
+      @include pequeno {
+        text-align: center;
+      }
     }
     p {
       @include fontePequena;
       text-align: start;
+      @include pequeno {
+        text-align: center;
+      }
     }
   }
 }
@@ -288,15 +356,24 @@ header nav {
   h2 {
     @include fonteGrande;
     font-size: 2.3rem;
+    @include pequeno {
+      font-size: 1.6rem;
+    }
   }
   ul {
     display: flex;
     width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-around;
     li {
       display: flex;
       flex-direction: column;
       align-items: center;
       list-style: none;
+      max-width: 22%;
+      @include pequeno {
+        max-width: 45%;
+      }
       img {
         width: 100%;
       }
@@ -312,26 +389,34 @@ header nav {
 }
 .faq {
   padding: 5vw;
+  width: 100%;
   h2 {
     @include fonteGrande;
     font-size: 2.3rem;
   }
   .container__open {
-    background-color: green;
     padding: 1vw;
+    margin-bottom: 1rem;
+    padding: 0;
 
     .container__open--btn {
       width: 100%;
+      padding: 15px;
       display: flex;
       align-items: center;
-      background-color: transparent;
+      background-color: $btn_faq;
       border: transparent;
       @include fontePadrao;
+      font-size: 1.3rem;
+      margin: 0px;
+      cursor: pointer;
     }
   }
 
   .container__open--child {
-    background-color: red;
+    display: none;
+    padding: 15px;
+    background-color: $btn_faq;
     @include fontePequena;
     font-size: 1.2rem;
     text-align: start;

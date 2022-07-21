@@ -27,6 +27,11 @@ body {
     background-size: cover;
   }
 }
+@media (max-width: 830px) {
+  body {
+    background-size: 100%;
+  }
+}
 body .main-content {
   display: flex;
   flex-direction: column;
@@ -76,12 +81,22 @@ header nav a:hover {
     padding-top: 53vw;
   }
 }
+@media (max-width: 830px) {
+  .topo {
+    padding-top: 70vw;
+  }
+}
 .topo .anuncio {
   width: 600px;
   display: flex;
   flex-direction: column;
   justify-content: start;
   align-items: center;
+}
+@media (max-width: 830px) {
+  .topo .anuncio {
+    width: 250px;
+  }
 }
 .topo img {
   display: block;
@@ -117,17 +132,50 @@ header nav a:hover {
   color: #f9f9f9;
   transition: ease 0.2s;
 }
+@media (max-width: 830px) {
+  .topo a span {
+    font-size: 1rem;
+  }
+}
 .topo span:hover {
   background-color: #8921ff;
 }
 
 .hint {
+  display: flex;
+  justify-content: center;
   margin: 5rem 6rem;
+  padding: 30px;
   height: 38px;
   width: 38px;
   color: silver;
   background-color: transparent;
   border: transparent;
+  cursor: pointer;
+  -webkit-animation: btn_bounce 0.9s ease-in-out infinite;
+          animation: btn_bounce 0.9s ease-in-out infinite;
+}
+@-webkit-keyframes btn_bounce {
+  0% {
+    transform: translateY(8px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+  100% {
+    transform: translateY(8px);
+  }
+}
+@keyframes btn_bounce {
+  0% {
+    transform: translateY(8px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+  100% {
+    transform: translateY(8px);
+  }
 }
 .plans {
   width: 100%;
@@ -150,7 +198,13 @@ header nav a:hover {
   justify-content: space-evenly;
   align-items: flex-start;
 }
-.plans ul li {
+@media (max-width: 1025px) {
+  .plans ul {
+    display: grid;
+    grid-template-columns: auto;
+  }
+}
+.plans li {
   padding: 40px 20px;
   max-width: 380px;
   line-height: 1.5;
@@ -160,11 +214,11 @@ header nav a:hover {
   align-items: center;
   text-align: center;
 }
-.plans ul li img {
+.plans li img {
   width: auto;
   height: 80px;
 }
-.plans ul li h2 {
+.plans li h2 {
   margin-bottom: 20px;
   font-size: 1.65rem;
   letter-spacing: 1;
@@ -172,7 +226,7 @@ header nav a:hover {
   text-align: center;
   margin: 30px 0px 0px 0px;
 }
-.plans ul li p {
+.plans li p {
   width: 90%;
   height: 100px;
   margin-bottom: 10px;
@@ -183,13 +237,13 @@ header nav a:hover {
   font-size: 1.1rem;
   letter-spacing: 0.7;
 }
-.plans ul li a {
+.plans li a {
   display: inline-flex;
   text-decoration: none;
   width: 90%;
   margin-top: 20px;
 }
-.plans ul li span {
+.plans li span {
   background-color: #6421ff;
   width: 100%;
   margin-bottom: 10px;
@@ -205,14 +259,15 @@ header nav a:hover {
   text-transform: uppercase;
   transition: ease 0.2s;
 }
-.plans ul li span:hover {
+.plans li span:hover {
   background-color: #8921ff;
 }
-.plans ul #popular {
+.plans #popular {
   background: url(/imagens/popular.png) top no-repeat;
   background-size: contain;
 }
-.plans #note {
+
+#note {
   margin-bottom: 10px;
   font-size: 1.1rem;
   letter-spacing: 1;
@@ -229,13 +284,30 @@ header nav a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
+}
+@media (max-width: 1025px) {
+  .yourway {
+    padding: 6rem 2rem;
+  }
 }
 .yourway img {
   width: 50%;
 }
+@media (max-width: 1025px) {
+  .yourway img {
+    min-width: 90%;
+  }
+}
 .yourway .yourWay__text {
   padding: 3rem;
   width: 50%;
+}
+@media (max-width: 1025px) {
+  .yourway .yourWay__text {
+    min-width: 90%;
+    padding: 3rem 0px;
+  }
 }
 .yourway .yourWay__text h2 {
   margin-bottom: 30px;
@@ -244,6 +316,11 @@ header nav a:hover {
   text-align: center;
   font-size: 2.5rem;
   text-align: start;
+}
+@media (max-width: 1025px) {
+  .yourway .yourWay__text h2 {
+    text-align: center;
+  }
 }
 .yourway .yourWay__text p {
   margin-bottom: 10px;
@@ -255,6 +332,11 @@ header nav a:hover {
   text-align: start;
   line-height: 1.6;
   letter-spacing: 1.2;
+}
+@media (max-width: 1025px) {
+  .yourway .yourWay__text p {
+    text-align: center;
+  }
 }
 
 .originals {
@@ -281,10 +363,19 @@ header nav a:hover {
 }
 .originals ul {
   width: 100%;
-  display: grid;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   list-style: none;
   gap: 1.5rem;
-  grid-template-columns: auto auto auto;
+}
+.originals ul li {
+  max-width: 30%;
+}
+@media (max-width: 1025px) {
+  .originals ul li {
+    max-width: 45%;
+  }
 }
 .originals ul li img {
   width: 100%;
@@ -296,8 +387,23 @@ header nav a:hover {
   padding: 5vw;
   position: relative;
 }
-.download img {
+.download .default_img {
   width: 100%;
+}
+@media (max-width: 830px) {
+  .download .default_img {
+    display: none;
+  }
+}
+.download .small_img {
+  display: none;
+  width: 100%;
+}
+@media (max-width: 830px) {
+  .download .small_img {
+    display: block;
+    margin-bottom: 2rem;
+  }
 }
 .download div {
   width: 40%;
@@ -306,12 +412,23 @@ header nav a:hover {
   left: 52%;
   top: 40%;
 }
+@media (max-width: 830px) {
+  .download div {
+    position: static;
+    display: inline;
+  }
+}
 .download div h2 {
   margin-bottom: 30px;
   font-size: 1.85rem;
   letter-spacing: 1.1;
   text-align: center;
   text-align: start;
+}
+@media (max-width: 830px) {
+  .download div h2 {
+    text-align: center;
+  }
 }
 .download div p {
   margin-bottom: 10px;
@@ -320,6 +437,11 @@ header nav a:hover {
   color: silver;
   text-align: center;
   text-align: start;
+}
+@media (max-width: 830px) {
+  .download div p {
+    text-align: center;
+  }
 }
 
 .devices {
@@ -335,15 +457,28 @@ header nav a:hover {
   text-align: center;
   font-size: 2.3rem;
 }
+@media (max-width: 830px) {
+  .devices h2 {
+    font-size: 1.6rem;
+  }
+}
 .devices ul {
   display: flex;
   width: 100%;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 .devices ul li {
   display: flex;
   flex-direction: column;
   align-items: center;
   list-style: none;
+  max-width: 22%;
+}
+@media (max-width: 830px) {
+  .devices ul li {
+    max-width: 45%;
+  }
 }
 .devices ul li img {
   width: 100%;
@@ -366,6 +501,7 @@ header nav a:hover {
 
 .faq {
   padding: 5vw;
+  width: 100%;
 }
 .faq h2 {
   margin-bottom: 30px;
@@ -375,23 +511,30 @@ header nav a:hover {
   font-size: 2.3rem;
 }
 .faq .container__open {
-  background-color: green;
   padding: 1vw;
+  margin-bottom: 1rem;
+  padding: 0;
 }
 .faq .container__open .container__open--btn {
   width: 100%;
+  padding: 15px;
   display: flex;
   align-items: center;
-  background-color: transparent;
+  background-color: #13151d;
   border: transparent;
   margin-bottom: 20px;
   font-size: 1.65rem;
   letter-spacing: 1;
   color: #f9f9f9;
   text-align: center;
+  font-size: 1.3rem;
+  margin: 0px;
+  cursor: pointer;
 }
 .faq .container__open--child {
-  background-color: red;
+  display: none;
+  padding: 15px;
+  background-color: #13151d;
   margin-bottom: 10px;
   font-size: 1.1rem;
   letter-spacing: 1;
