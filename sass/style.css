@@ -1,6 +1,6 @@
 @font-face {
   font-family: "avenir-roman";
-  src: url(./fonts/avenir-roman.ttf);
+  src: url(../fonts/avenir-roman.ttf);
 }
 * {
   margin: 0px;
@@ -17,13 +17,13 @@ body {
 }
 
 body {
-  background: #040814 url(./imagens/disneyplus.jpg) no-repeat top;
+  background: #040814 url(../imagens/disneyplus.jpg) no-repeat top;
   background-size: cover;
   color: #f9f9f9;
 }
 @media (max-width: 1025px) {
   body {
-    background: #040814 url(./imagens/background_mobile.jpg) no-repeat top;
+    background: #040814 url(../imagens/background_mobile.jpg) no-repeat top;
     background-size: cover;
   }
 }
@@ -263,7 +263,7 @@ header nav a:hover {
   background-color: #8921ff;
 }
 .plans #popular {
-  background: url(./imagens/popular.png) top no-repeat;
+  background: url(../imagens/popular.png) top no-repeat;
   background-size: contain;
 }
 
